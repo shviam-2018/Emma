@@ -1,8 +1,10 @@
+#all needed import
 import pyttsx3
 import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
+
 #defining all veribal 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
@@ -75,13 +77,6 @@ if __name__=="__main__":
             
         elif "open chat gpt" in query:
             webbrowser.open("https://chat.openai.com/chat")
-        elif"study time" in query:
-            print("coding time! or 10th prep")
-            speak("coding time! or 10th prep")
-            if query =="coding":
-                open("https://vscode.dev/")
-            elif "10th prep" in query:
-                open("file:///C:/Users/sikok/OneDrive/Desktop/Lesson-00.pmd.pdf")
         
         
         else:
