@@ -63,19 +63,19 @@ if __name__=="__main__":
             print(results)
             speak(results)
 
-        elif "open youtube" in query:
+        elif "youtube" in query:
             webbrowser.open("youtube.com")
             
-        elif "open google" in query:
+        elif "google" in query:
             webbrowser.open("google.com")
             
-        elif "open email" in query:
+        elif "email" in query:
             webbrowser.open("mail.google.com")
             
         elif "search" in query:
             webbrowser.open("https://www.google.com/search?q=" + query)
             
-        elif "open chat gpt" in query:
+        elif "chat gpt" in query:
             webbrowser.open("https://chat.openai.com/chat")
         
         
