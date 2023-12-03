@@ -4,6 +4,7 @@ import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
+import os
 
 #defining all veribal 
 engine = pyttsx3.init("sapi5")
@@ -33,6 +34,7 @@ def wishme():
     
 def takecommand():
 # it takes microphone input and ruterns string output
+    noise_reduction = 0.3
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("listening...")
@@ -77,6 +79,12 @@ if __name__=="__main__":
             
         elif "chat gpt" in query:
             webbrowser.open("https://chat.openai.com/chat")
+            
+        elif "study" in query:
+            webbrowser.open("https://www.youtube.com/watch?v=irqbmMNs2Bo&t=3404s&ab_channel=ApnaCollege")
+            
+        elif "music" in query:
+            os.startfile("https://open.spotify.com/")
         
         
         else:
