@@ -27,8 +27,8 @@ def wishme():
         print("Good evening!")
         speak("Good evening!")
         
-    print("I am Campa sir. Please tell me how can I assist you today.")  
-    speak("I am Campa sir. Please tell me how can I assist you today.")
+    print("I am Emma sir. Please tell me how can I assist you today.")  
+    speak("I am Emma sir. Please tell me how can I assist you today.")
     
 #wishme() # call the wishme() function
     
@@ -66,27 +66,41 @@ if __name__=="__main__":
             speak(results)
 
         elif "youtube" in query:
-            webbrowser.open("youtube.com")
-            
-        elif "google" in query:
-            webbrowser.open("google.com")
-            
-        elif "email" in query:
-            webbrowser.open("mail.google.com")
-            
-        elif "search" in query:
-            webbrowser.open("https://www.google.com/search?q=" + query)
-            
-        elif "chat gpt" in query:
-            webbrowser.open("https://chat.openai.com/chat")
-            
-        elif "study" in query:
-            webbrowser.open("https://www.youtube.com/watch?v=irqbmMNs2Bo&t=3404s&ab_channel=ApnaCollege")
-            
-        elif "music" in query:
-            os.startfile("https://open.spotify.com/")
-        
-        
-        else:
-            print("i cant answer you i am sorry")
-            speak("i cant answer you i am sorry")
+            webbrowser.open("https://www.youtube.com/")
+
+elif "google" in query:
+    webbrowser.open("https://www.google.com/")
+
+elif "email" in query:
+    webbrowser.open("https://mail.google.com/")
+
+elif "search" in query:
+    webbrowser.open("https://www.google.com/search?q=" + query)
+
+elif "chat gpt" in query:
+    webbrowser.open("https://chat.openai.com/chat")
+
+elif "study" in query:
+    webbrowser.open("https://www.youtube.com/watch?v=irqbmMNs2Bo&t=3404s&ab_channel=ApnaCollege")
+
+elif "music" in query:
+    webbrowser.open("https://open.spotify.com/")
+
+elif "news" in query:
+    webbrowser.open("https://www.bbc.com/news")
+
+elif "weather" in query:
+    webbrowser.open("https://weather.com/")
+
+elif "calendar" in query:
+    webbrowser.open("https://calendar.google.com/")
+
+elif "recipe" in query:
+    webbrowser.open("https://www.allrecipes.com/")  
+
+elif "learn a language" in query:
+    webbrowser.open("https://www.duolingo.com/")  
+
+else:
+    print("I am sorry but i cant seem to help you with that.")
+    speak("I am sorry but i cant seem to help you with that.")
