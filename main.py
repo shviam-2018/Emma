@@ -1,8 +1,11 @@
+#all needed import
 import pyttsx3
 import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
+import os
+
 #defining all veribal 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
@@ -24,13 +27,14 @@ def wishme():
         print("Good evening!")
         speak("Good evening!")
         
-    print("I am Campa sir. Please tell me how can I assist you today.")  
-    speak("I am Campa sir. Please tell me how can I assist you today.")
+    print("I am Emma sir. Please tell me how can I assist you today.")  
+    speak("I am Emma sir. Please tell me how can I assist you today.")
     
 #wishme() # call the wishme() function
     
 def takecommand():
 # it takes microphone input and ruterns string output
+    noise_reduction = 0.3
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("listening...")
@@ -61,29 +65,42 @@ if __name__=="__main__":
             print(results)
             speak(results)
 
-        elif "open youtube" in query:
-            webbrowser.open("youtube.com")
-            
-        elif "open google" in query:
-            webbrowser.open("google.com")
-            
-        elif "open email" in query:
-            webbrowser.open("mail.google.com")
-            
-        elif "search" in query:
-            webbrowser.open("https://www.google.com/search?q=" + query)
-            
-        elif "open chat gpt" in query:
-            webbrowser.open("https://chat.openai.com/chat")
-        elif"study time" in query:
-            print("coding time! or 10th prep")
-            speak("coding time! or 10th prep")
-            if query =="coding":
-                open("https://vscode.dev/")
-            elif "10th prep" in query:
-                open("file:///C:/Users/sikok/OneDrive/Desktop/Lesson-00.pmd.pdf")
-        
-        
-        else:
-            print("i cant answer you i am sorry")
-            speak("i cant answer you i am sorry")
+        elif "youtube" in query:
+            webbrowser.open("https://www.youtube.com/")
+
+elif "google" in query:
+    webbrowser.open("https://www.google.com/")
+
+elif "email" in query:
+    webbrowser.open("https://mail.google.com/")
+
+elif "search" in query:
+    webbrowser.open("https://www.google.com/search?q=" + query)
+
+elif "chat gpt" in query:
+    webbrowser.open("https://chat.openai.com/chat")
+
+elif "study" in query:
+    webbrowser.open("https://www.youtube.com/watch?v=irqbmMNs2Bo&t=3404s&ab_channel=ApnaCollege")
+
+elif "music" in query:
+    webbrowser.open("https://open.spotify.com/")
+
+elif "news" in query:
+    webbrowser.open("https://www.bbc.com/news")
+
+elif "weather" in query:
+    webbrowser.open("https://weather.com/")
+
+elif "calendar" in query:
+    webbrowser.open("https://calendar.google.com/")
+
+elif "recipe" in query:
+    webbrowser.open("https://www.allrecipes.com/")  
+
+elif "learn a language" in query:
+    webbrowser.open("https://www.duolingo.com/")  
+
+else:
+    print("I am sorry but i cant seem to help you with that.")
+    speak("I am sorry but i cant seem to help you with that.")
