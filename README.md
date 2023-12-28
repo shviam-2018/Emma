@@ -1,6 +1,6 @@
 # Emma - Python Voice Assistant
 
-Emma is a Python-based voice assistant that utilizes various libraries to provide a range of functionalities through voice commands. This project uses pyttsx3 for text-to-speech conversion, speech_recognition for recognizing voice commands, wikipedia for searching Wikipedia, webbrowser for opening web pages, and os for system-related operations.
+Emma originally known as Eva. Is a Python-based voice assistant that utilizes various libraries to provide a range of functionalities through voice commands. This project uses pyttsx3 for text-to-speech conversion, speech_recognition for recognizing voice commands, wikipedia for searching Wikipedia, webbrowser for opening web pages, and os for system-related operations.
 
 ## Features
 
