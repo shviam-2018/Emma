@@ -29,6 +29,34 @@ Opens popular websites directly from the browser based on user commands:
 - **Calendar:** Opens [Google Calendar](https://calendar.google.com/)
 - **Recipe:** Explores recipes on [AllRecipes](https://www.allrecipes.com/)
 - **Learn a Language:** Opens [Duolingo](https://www.duolingo.com/)
+Certainly! Below is an added section to the README.md that explains how users can implement their own custom commands:
+
+# Customization
+
+Extend Emma's functionality by adding your own custom commands. Follow the example below to implement a new command:
+
+```python
+# Example: Open a custom website
+elif "my command" in query:
+    webbrowser.open("https://www.my-website.com/")
+```
+
+1. Open the `main.py` file.
+
+2. Locate the section with custom commands.
+
+3. Add your own command using the template:
+   ```python
+   elif "<your_command_keyword>" in query:
+       webbrowser.open("<https://your-custom-url.com/>")
+   ```
+`Tip:` add you keyword and url inside the `<>` and remove the `<>`
+
+4. Save the file and run the script.
+
+Now, when you say "your_command_keyword" during voice interaction, Emma will open the specified URL.
+
+Feel free to add more custom commands or customize existing ones based on your preferences.
 
 ### 6. Apology for Unrecognized Commands
 If Emma fails to understand a command, it politely apologizes.
